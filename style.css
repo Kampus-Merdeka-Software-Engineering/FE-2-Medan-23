@@ -209,18 +209,6 @@ nav ul li a:hover {
   border-radius: 10px;
 }
   
-#contact {
-  font-family: sans-serif;
-  padding: 100px 0;
-  text-align: center;
-}
-  
-.contact-content {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
 
 .container-btn button {
   padding: 10px 15px;
