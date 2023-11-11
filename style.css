@@ -1,4 +1,4 @@
-* {
+*{
 padding: 0;
 margin: 0;
 }
@@ -135,6 +135,7 @@ nav ul li a:hover {
   font-size: 30px;
   color: darkgreen;
   font-weight: bold;
+  text-align: center;
 }
   
 #menu {
@@ -173,14 +174,12 @@ nav ul li a:hover {
 .menu-img {
   width: 40%;
 }
-  
-#about {
+
+
+#about .about-content {
   font-family: sans-serif;
   padding: 100px 0;
   background-color: #e0dede;
-}
-  
-#about .about-content {
   text-align: center;
   margin: auto;
   max-width: 700px;
@@ -208,7 +207,6 @@ nav ul li a:hover {
 .coffee-img img {
   border-radius: 10px;
 }
-  
 
 .container-btn button {
   padding: 10px 15px;
@@ -226,6 +224,83 @@ nav ul li a:hover {
   font-size: 24px;
   position: relative;
   padding: 20px 0;
+}
+/*Our team*/
+div {
+  display: block;
+}
+
+a :-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.grid-member > article img {
+  padding: center;
+  position: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.grid-member img {
+  margin: auto;
+  padding-top: 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px 50px 100px 100px;
+
+}
+
+img {
+object-fit: cover;
+}
+
+img {
+overflow-clip-margin: content-box;
+overflow: clip;
+}
+
+.grid-member {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 50px 100px;
+margin: 50px 50px 50px 50px;
+padding-top: 20px;
+}
+
+.grid-member p {
+color: #000;
+font-size: 15px;
+padding: 0px 0px 0px 0px;
+}
+
+.grid-member > article {
+font-family: sans-serif;
+box-shadow: 0 8px 8px 0 rba(0, 0, 0, 0.2);
+border-radius: 20px 20px 20px 20px;
+text-align: center;
+background: darkgreen;
+width: 250px;
+height: 350px;
+transition: 0.2s ease 0s transform;
+cursor: pointer;
+}
+
+.grid-member button {
+border: none;
+outline: 0;
+display: inline-block;
+padding: 10px;
+color: white;
+background-color: black;
+border-radius: 20px 20px 20px 20px;
+text-align: center;
+cursor: pointer;
+width: 80%;
 }
     /* RESPONSIVE FOOTER */
 .footer-col {
@@ -315,4 +390,48 @@ ul {
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
+}
+
+/*Responsif*/
+@media (max-width:768px) {
+
+  #menu-btn {
+      display: initial;
+  }
+
+  .header .navbar {
+      position: absolute;
+      top: 115%;
+      right: 2rem;
+      border-radius: .5rem;
+      box-shadow: var(--box-shadow);
+      width: 30rem;
+      border: var(--border);
+      background: #fff;
+      transform: scale(0);
+      opacity: 0;
+      transform-origin: top right;
+      transition: none;
+  }
+
+  .header .navbar.active {
+      transform: scale(1);
+      opacity: 1;
+      transition: .2s ease-out;
+  }
+
+  .header .navbar a {
+      font-size: 2rem;
+      display: block;
+      margin: 2.5rem;
+  }
+
+}
+
+@media (max-width:450px) {
+
+  html {
+      font-size: 50%;
+  }
+
 }
