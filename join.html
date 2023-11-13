@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Join Now</title>
+        <link href="awal.html" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="form-box-login">
+                <h2>Login</h2>
+                <form id="loginForm" >
+                    <div class="input-box">
+                        <input type="text" placeholder="Email" required id="email" name="email">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class = "input-box">
+                        <input type="password" placeholder="Password" required id="password" name="password">
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class = "remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" id="login">Login</button>
+                    <div class="register-link">
+                        <p>Don't have an account? <a href="register.html">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+
+        </div>
+    </body>
+</html>
