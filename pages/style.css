@@ -227,6 +227,7 @@
       position: relative;
       padding: 20px 0;
     }
+
     /*Our team*/
     div {
       display: block;
@@ -304,6 +305,110 @@
     cursor: pointer;
     width: 80%;
     }
+
+    /* our store */
+    html{
+      scroll-behavior: smooth;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    h2,h4{
+      text-align: center;
+      color: #006400;
+    }
+    h3{
+      font-size: 15px;
+      color : black;
+    }
+
+    p{
+      color: black;
+    }
+
+    body{
+        margin: 0;
+        font-family: sans-serif;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    /* Tutorial */
+    .Store{
+      margin: 0 0 100px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .storeour {
+      width: 70%;
+      border-radius: 10px;
+      border: 3px solid #006400;
+      background-color: #ffffff;
+      padding: 20px;
+      margin-top: 100px;
+    }
+
+    .section{
+      display: flex;
+    }
+
+    #store-section{
+      text-align: center;
+;
+    }
+
+    .toko a{
+      color: black;
+      }
+
+    .toko{
+      width: 45%;
+      margin: 0 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .toko-box img{
+      border: 2px solid #006400;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .toko-box img:hover{
+      border: 5px solid darkgreen;
+    }
+
+    .storeour .text{
+      color: #006400;
+    }
+
+    @media screen and (max-width: 1050px) {
+      .text p{
+        font-size: 16px;
+      }
+
+      .Store{
+        width: 100%;
+      }
+
+      .section{
+        display: inline-block;
+      }
+
+      #store-section{
+        display: inline-block;
+      }
+
+      .toko{
+        width: 100%;
+        margin: 10px 0 10px 0;
+      }
+    }
+
         /* RESPONSIVE FOOTER */
     .footer-col {
       width: 50%;
