@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Starbucks</title>
+  </head>
+<!-- body -->
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+        <img src="images/logo.png" width="70%" alt="" /></a>
+      </div>
+      <ul class="navbar-nav-left">
+        <li>
+          <a href="coffee.html">COFFEE</a>
+        </li>
+        <li>
+          <a href="menu.html">MENU</a>
+        </li>
+        <li>
+          <a href="reward.html">STARBUCKS REWARD</a>
+        </li>
+        <li>
+          <a href="about.html">ABOUT US</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav-right">
+        <li>
+          <a href="store.html">
+          <img src="images/location.svg" alt="" />
+          <span>Find a store</span>
+          </a>
+        </li>
+        <li>
+        <a href="join.html">
+        <button class="btn btn-dark">Join now</button></a></li>
+      </ul>
+      </nav>
+      <div class="banner"></div>
+  </header>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+       <!-- Full-width images with number and caption text -->
+       <div class="mySlides fade">
+         <img src="images/r1.jpg" style="width:100%">
+       </div>
+     
+       <div class="mySlides fade">
+         <img src="images/r2.jpg" style="width:100%">
+       </div>
+       <!-- Next and previous buttons -->
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+     </div>
+     
+     <div class="container-fluid choose">
+       <h2> CHOOSE YOUR FAVORITE REWARDS
+         <br>
+         WITH STARBUCKS INDONESIA APP
+       </h2>
+       <img src="images/choose.png">
+     </div>
+     
+     <div class="container-fluid level">
+       <h2>LEVEL UP TO UNCLOCK MORE BENEFITS</h2>
+       <img src="images/level.png">
+       <p><strong> 300 Stars within a year to get Gold status</strong></p>
+     </div>
+     
+     
+       <section class="rewards">
+         <header class="rewards__header">
+           <h2>REDEEM STARS WITH
+             <br>
+             CHOISE OF REWARDS
+           </h2>
+         </header>
+         <nav class="rewards__gallery--buttons tab">
+           <button class="tablinks active" onclick="openTabs(event, '25')">25<i class="fas fa-star"></i>
+           </button>
+           <button class="tablinks" onclick="openTabs(event, '50')">50<i class="fas fa-star"></i>
+           </button>
+           <button class="tablinks" onclick="openTabs(event, '150')">150<i class="fas fa-star"></i>
+           </button>
+           <button class="tablinks" onclick="openTabs(event, '200')">200<i class="fas fa-star"></i>
+           </button>
+           <button class="tablinks" onclick="openTabs(event, '400')">400<i class="fas fa-star"></i>
+           </button>
+         </nav>
+         <div class="rewards__gallery">
+           <figure class="tab-content default-active" id="25">
+             <img src="images/025.webp" alt="espresso shot and coffee" class="slide__image" width="500">
+             <figcaption>
+               <h4>Customize your drink</h4>
+               <p>Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite syrup.</p> 
+             </figcaption>
+           </figure>
+           <figure class="tab-content" id="50">
+             <img src="images/050.webp" alt="coffee cake and coffee" class="slide__image" width="500">
+             <figcaption>
+               <h4>Brewed hot coffee, bakery item or hot tea</h4>
+               <p>Pair coffee cake or an almond croissant with your fresh cup of hot brew.</p>
+             </figcaption>
+           </figure>
+           <figure class="tab-content" id="150">
+             <img src="images/150.webp" alt="sandwich, smoothie and coffee" class="slide__image" width="500">
+             <figcaption>
+               <h4>Handcrafted drink, hot breakfast or parfait</h4>
+               <p>Have a really good morning with a breakfast sandwich, oatmeal or your favorite drink.</p>
+             </figcaption>
+           </figure>
+           <figure class="tab-content" id="200">
+             <img src="images/200.webp" alt="salad and protein box" class="slide__image" width="500">
+             <figcaption>
+               <h4>Salad, sandwich or protein box</h4>
+               <p>Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese Protein Box.</p>
+             </figcaption>  
+           </figure>
+           <figure class="tab-content" id="400">
+             <img src="images/400.webp" alt="Starbucks cup and bag of coffee" class="slide__image" width="500">
+             <figcaption>
+               <h4>Select merchandise or at-home coffee</h4>
+               <p>Take home a signature cup, a bag of coffee or your choice of select coffee accessories.</p>
+             </figcaption>
+           </figure>
+         </div>
+       </section>
+     
+       <script src="js/script.js"></script>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container-footer">
+    <div class="row-footer">
+      <div class="footer-col">
+        <h4>ABOUT US</h4>
+          <ul>
+          <li><a href="#">Our Heritage</a></li>
+          <li><a href="#">Pressroom</a></li>
+          <li><a href="#">Our Company</a></li>
+          <li><a href="#">Career Center</a></li>
+          <li><a href="#">Newsroom</a></li>
+          </ul>
+      </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+            <ul>
+            <li><a href="#">FAQ </a></li>
+            </ul>
+        </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+              <ul>
+              <li><a href="#">Store Locator</a></li>
+              <li><a href="#">For Partners</a></li>
+              </ul>
+          </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+                <div class="social-links">
+                  <img src="images/facebook.svg" alt=""
+                  class="fab fa-facebook-f"></i>
+                  <img src="images/twitter.svg" alt=""
+                  class="fab fa-twitter"></img>
+                  <img src="images/instagram.svg" alt=""
+                  class="fab fa-instagram"></img>
+                </div>
+            </div>
+    </div>
+  </div>
+
+      <div class="footer-copyright">
+        <div class="container-footer">
+          <p>© 2023 Created by Group 23 - Team L - Section Medan.</p>
+        </div>
+      </div>
+
+  </footer>
+</body>
+</html>
