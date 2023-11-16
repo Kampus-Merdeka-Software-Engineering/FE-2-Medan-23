@@ -1,3 +1,77 @@
+padding: 0;
+    margin: 0;
+    }
+      
+    p {
+    font-size: 18px;
+    line-height: 25px;
+    }
+      
+    header {
+      display: inline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    nav {
+    font-family: sans-serif;
+    line-height: 1.71429;
+    font-size: 10px;
+    box-shadow: 0 0 5px darkgreen;
+    background-color: white;
+    display: flex;
+    left: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    padding: 10px 20px;
+    }
+      
+    .logo {
+      width: 50px;
+    }
+    nav ul {
+      padding-right: 10px;
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+      
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+    }
+      
+    nav ul li a:hover {
+      color: darkgreen;
+      font-weight: bold;
+      }
+      
+    .navbar-nav-left {
+      text-transform: uppercase;
+      flex: 1;
+      margin-left: 10px;
+    }
+      
+    .navbar-nav-right li:first-child a {
+      display: flex;
+      align-items: center;
+    }
+      
+    .navbar-nav-right img {
+      height: 24px;
+      width: 18px;
+      margin-right: 10px;
+      }
+      
+     .navbar-nav-right li:nth-child(2) {
+      margin: 0 5px;
+    }
+
 :root {
   --dk-green: #025C11;
   --lt-green: #008248;
@@ -206,6 +280,8 @@ section > header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: #c6e4a6;
+  box-shadow: none;
 }
 
 .rewards__gallery--buttons > button {
@@ -214,7 +290,7 @@ section > header {
   border-radius: 0;
   padding: 0 .2em;
   width: 100%;
-  font-size: 2.25rem;
+  font-size: 1.125rem;
   font-family: var(--nav-font);
   cursor: pointer;
   border-bottom: 4px solid transparent;
@@ -288,7 +364,28 @@ section > header {
     max-height: 45vh;
   }
 }
+/* RESPONSIVE FOOTER */
+.footer-col {
+  width: 50%;
+  margin-bottom: 30px;
+}
 
+.container-footer {
+  max-width: 1170px;
+  margin: auto;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+    
+.row-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+    
+ul {
+  list-style: none;
+}  
+  
 .footer {
   background-color: darkgreen;
   padding-top: 50px;
