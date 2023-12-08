@@ -6,6 +6,7 @@
     p {
     font-size: 18px;
     line-height: 25px;
+    color: #fff;
     }
       
     header {
@@ -21,7 +22,6 @@
     font-family: sans-serif;
     line-height: 1.71429;
     font-size: 10px;
-    box-shadow: 0 0 5px darkgreen;
     background-color: white;
     display: flex;
     left: space-between;
@@ -110,29 +110,11 @@
       background-color: #333;
     }
       
-      /* Backgrounds */
-    .bg-primary {
-      background-color: var(--color-primary);
-      color: #fff;
-    }
-    .bg-secondary {
-      background-color: var(--color-secondary);
-      color: #fff;
-    }
-    .bg-extra {
-      background-color: var(--color-extra);
-      color: #000;
-    }
-    .bg-dark {
-      background-color: var(--color-dark);
-      color: #000;
-    }
-      
     .line {
       margin: auto;
       width: 200px;
       height: 7px;
-      background-color: darkgreen;
+      background-color: white;
       border-radius: 10px;
       margin-top: 10px;
     }
@@ -141,9 +123,10 @@
       font-weight:bold; 
       font-family: sans-serif;
       font-size: 30px;
-      color: darkgreen;
+      color: white;
       font-weight: bold;
       text-align: center;
+      background-color: #004225;
     }
       
     .btn-home {
@@ -161,7 +144,7 @@
         
       #menu {
         font-family: sans-serif;
-        background-color: #fff;
+        background-color: #004225;
         text-align: center;
         padding: 25px 0;
       }
@@ -184,11 +167,11 @@
 }
 
 .menu .menu_box .menu_card{
+  background-color: #fff;
   width: 300px;
   height: 450px;
   padding-top: 5px;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .menu .menu_box .menu_card .menu_image{
@@ -287,6 +270,7 @@
   padding: 70px 0;
   background-size: cover;
   background-position: center;
+  background-color: #004225;
 }
 
 .order h1{
@@ -355,14 +339,15 @@
 }
 
 .order .order_main form .order_btn{
-  width: 300px;
-  height: 15px;
-  padding: 10px 0;
-  background: darkgreen;
-  color: white;
+  padding: 15px 15px;
+  border-radius: 10px;
+  margin-top: 25px;
+  background-color: white;
+  color: #004225;
+  font-size: 15px;
+  cursor: pointer;
   width: 40%;
   text-align: center;
-  margin-top: 25px;
   text-decoration: none;
 }
 
@@ -389,11 +374,12 @@
     }  
       
     .footer {
-      background-color: darkgreen;
       padding-top: 50px;
       padding-bottom: 20px;
     }
-
+    .footer p{
+      color: black;
+    }
     .footer img{
       width : 25px;
     }
@@ -438,7 +424,7 @@
     }
         
     .footer-col ul li a:hover {
-      color: #ffffff;
+      color: #004225;
       padding-left: 8px;
     }
         
@@ -462,5 +448,5 @@
     footer .footer-copyright{
       text-align: border-box;
       font-size: 12px;
-      color: white;
+      color: black;
     }

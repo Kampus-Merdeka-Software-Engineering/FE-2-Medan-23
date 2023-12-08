@@ -166,6 +166,7 @@ h4 {
 }
 
 p {
+  color: white;
   font-size: clamp(.85rem, 1vw + .5rem, 1rem);
 }
 
@@ -426,7 +427,7 @@ ul {
 }  
   
 .footer {
-  background-color: darkgreen;
+  background-color: #004225;
   padding-top: 50px;
   padding-bottom: 20px;
 }
@@ -442,7 +443,7 @@ ul {
     
 .footer-col h4 {
   font-size: 18px;
-  color: var(--muda);
+  color: white;
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -454,7 +455,7 @@ ul {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #000000;
+  background-color: #fff;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
@@ -467,7 +468,7 @@ ul {
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 300;
   display: block;
@@ -475,7 +476,7 @@ ul {
 }
     
 .footer-col ul li a:hover {
-  color: #ffffff;
+  color: #004225;
   padding-left: 8px;
 }
     
@@ -487,13 +488,12 @@ ul {
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: black;
+  color: white;
   transition: all 0.5s ease;
 }
     
 .footer-col .social-links a:hover {
-  color: #24262b;
-  background-color: #ffffff;
+  color: white;
 }
 
 footer .footer-copyright{

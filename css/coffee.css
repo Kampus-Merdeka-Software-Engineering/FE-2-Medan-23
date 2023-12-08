@@ -21,7 +21,6 @@
     font-family: sans-serif;
     line-height: 1.71429;
     font-size: 10px;
-    box-shadow: 0 0 5px darkgreen;
     background-color: white;
     display: flex;
     left: space-between;
@@ -141,7 +140,7 @@
       font-weight:bold; 
       font-family: sans-serif;
       font-size: 30px;
-      color: darkgreen;
+      color: white;
       font-weight: bold;
       text-align: center;
     }
@@ -155,14 +154,13 @@
     }
       
     .btn-home {
-      padding: 15px 30px;
-      border: none;
+      padding: 15px 15px;
       border-radius: 10px;
-      margin-top: 20px;
-      background-color: darkgreen;
+      margin-top: 25px;
+      background-color: transparent;
       color: white;
-      font-size: 20px;
-        cursor: pointer;
+      font-size: 15px;
+      cursor: pointer;
       }
     
     .coffee-caption {
@@ -170,13 +168,14 @@
       }
       
     .coffee-caption h1 {
-      color: darkgreen;
+      color: white;
       font-weight: bold;
       font-size: 50px;
     }
       
     .coffee-caption p {
       margin: 10px 0;
+      color: white;
     }
       
     .coffee-img {
@@ -185,9 +184,8 @@
       
     #coffee {
       font-family: sans-serif;
-      background-color: #e0dede;
+      background-color: #004225;
       text-align: center;
-      padding: 100px 0;
     }
       
     .coffee-content {
@@ -226,7 +224,7 @@
     }  
       
     .footer {
-      background-color: darkgreen;
+      background-color: white;
       padding-top: 50px;
       padding-bottom: 20px;
     }
@@ -275,7 +273,7 @@
     }
         
     .footer-col ul li a:hover {
-      color: #ffffff;
+      color: #004225;
       padding-left: 8px;
     }
         
@@ -299,5 +297,5 @@
     footer .footer-copyright{
       text-align: border-box;
       font-size: 12px;
-      color: white;
+      color: black;
     }
