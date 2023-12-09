@@ -1,3 +1,8 @@
+const ENVIRONMENT = window.location.protocol === 'https:' ? 'production' : 'development'
+const API_URL = ENVIRONMENT === 'production' ? 'https://be-2-medan-23-production.up.railway.app' : 'http://localhost:3000'
+
+const containerElement = document.getElementById('container')
+
 function openTabs(evt, tabName) {
     const tabContent = document.getElementsByClassName('tab-content');
     for (let i = 0; i < tabContent.length; i++) {
@@ -28,3 +33,43 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+// Fetch all orders
+fetch(API_URL + '/orders')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to fetch orders');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('All orders:', data.data);
+    // Handle the data as needed
+  })
+  .catch(error => console.error('Error fetching orders:', error.message));
+
+// Add an order
+const orderDetails = {
+  name: 'John Doe',
+  email: 'john@example.com',
+  order: 'Black Coffee',
+};
+
+fetch(API_URL + '/addOrder', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(orderDetails),
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to place order');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Order placed successfully:', data);
+    // Handle the data as needed
+  })
+  .catch(error => console.error('Error placing order:', error.message));
