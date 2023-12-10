@@ -94,4 +94,4 @@ $("#order_btn").on('click', () => {
       alert("Order placed successfully");
     })
     .catch(error => console.error('Error placing order:', error.message));
-})
+});
