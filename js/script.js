@@ -1,7 +1,7 @@
 const ENVIRONMENT = window.location.protocol === 'https:' ? 'production' : 'development'
-const API_URL = ENVIRONMENT === 'production' ? 'https://be-2-medan-23-production.up.railway.app/orders' : 'http://localhost:3000'
+const API_URL = ENVIRONMENT === 'production' ? 'https://be-2-medan-23-production.up.railway.app' : 'http://localhost:3000'
 
-
+const containerElement = document.getElementById('container')
 
 function openTabs(evt, tabName) {
     const tabContent = document.getElementsByClassName('tab-content');
@@ -34,25 +34,42 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-// Using Callback Chaining
-// fetch(`${API_URL}/user-foo`, { method: 'GET' })
-//     .then(response => response.json())
-//     .then(data => {
-//         data.forEach(user => {
-//             const userHTMLElement = document.createElement('div')
-//             userHTMLElement.className = 'box'
+// Fetch all orders
+fetch(API_URL + '/orders')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to fetch orders');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('All orders:', data.data);
+    // Handle the data as needed
+  })
+  .catch(error => console.error('Error fetching orders:', error.message));
 
-//             userHTMLElement.innerHTML = `
-//                 <h1>${user.nama}</h1>
-//                 <p>${user.nama} suka makan ${user.Food.rasa}</p>
-//             `
+// Add an order
+const orderDetails = {
+  name: 'John Doe',
+  email: 'john@example.com',
+  order: 'Black Coffee',
+};
 
-//             containerElement.appendChild(userHTMLElement)
-//         })
-//     })
-//     .catch(error => {
-//         console.error({
-//             error
-//         })
-//         alert('Error happens')
-//     })
+fetch(API_URL + '/addOrder', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(orderDetails),
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to place order');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Order placed successfully:', data);
+    // Handle the data as needed
+  })
+  .catch(error => console.error('Error placing order:', error.message));
