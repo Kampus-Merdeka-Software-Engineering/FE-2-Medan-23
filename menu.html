@@ -168,8 +168,9 @@
                 </select>
                 
                 <div>
-                <a href="#" class="order_btn" onclick = "return confirm('Terimakasih kami akan mengirimkan email kepada anda ketika pesanan sudah siap');">Order Now</a></div>
-                </form>
+                  <a href="#" class="order_btn" onclick="placeOrder()">Order Now</a>
+                </div>
+              </form>
           </div>
           
 
@@ -232,6 +233,20 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./js/script.js"></script>
+
+  <script>
+    function showNotification() {
+      alert("Terimakasih! Kami akan mengirimkan email kepada Anda ketika pesanan sudah siap.");
+    }
+  
+    document.addEventListener("DOMContentLoaded", function() {
+      const orderBtn = document.querySelector(".order_btn");
+      orderBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        showNotification();
+      });
+    });
+  </script>  
 
 </body>
 </html>
