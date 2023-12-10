@@ -63,7 +63,7 @@ $("#order_btn").on('click', () => {
     order,
   };
 
-  fetch(API_URL + '/orders/add', {
+  fetch(API_URL + '/orders', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
