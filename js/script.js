@@ -54,7 +54,7 @@ $("#order_btn").on('click', () => {
 
   const name = $("input[name=name]").val()
   const email = $("input[name=email]").val()
-  const order = $("input[name=order]").val()
+  const order = $("#order]").val()
 
   // Add an order
   const orderDetails = {
