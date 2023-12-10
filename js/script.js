@@ -79,20 +79,8 @@ $("#order_btn").on('click', () => {
     })
     .then(data => {
       console.log('Order placed successfully:', data);
-      // Update the order list (Assuming you have an element with ID "orderList")
-      const orderListElement = $("#orderList");
-
-      // Append the new order to the order list
-      const newOrderElement = $("<div>").text(`Order: ${data.order} - Name: ${data.name} - Email: ${data.email}`);
-      orderListElement.append(newOrderElement);
-
-      // Optionally, you can clear the form fields after placing the order
-      $("input[name=name]").val("");
-      $("input[name=email]").val("");
-      $("#order").val("");
-
-      // Optionally, you can show a success message to the user
-      alert("Order placed successfully");
+      // Handle the data as needed
+      alert("Order placed successfully")
     })
     .catch(error => console.error('Error placing order:', error.message));
 });
