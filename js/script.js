@@ -47,7 +47,7 @@ const getAllMenu = () => {
     .catch(error => console.error('Error fetching orders:', error.message));
 }
 
-$("#order").on('click', () => {
+$("#order_btn").on('click', () => {
   const _confirm = confirm('Terimakasih kami akan mengirimkan email kepada anda ketika pesanan sudah siap');
 
   if (!_confirm) return;
