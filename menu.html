@@ -166,7 +166,7 @@
                 <option value="Cold Brew">Cold Brew</option>
               </select>              
               <div>
-              <a href="#" class="order_btn" onclick="placeOrder()">Order Now</a>
+                <a href="#" class="order_btn" onclick="checkDropdown()">Order Now</a>
               </div>
             </form>
           </div>
@@ -231,17 +231,20 @@
   <script src="./js/script.js"></script>
 
   <script>
-    function showNotification() {
-      alert("Terimakasih! Kami akan mengirimkan email kepada Anda ketika pesanan sudah siap.");
+    function checkDropdown() {
+      // Check if the dropdown is open
+      var dropdown = document.getElementById("order");
+      if (dropdown.selectedIndex === -1) {
+        // Dropdown is open, do nothing
+      } else {
+        // Dropdown is closed, call the placeOrder function
+        placeOrder();
+      }
     }
-  
-    document.addEventListener("DOMContentLoaded", function() {
-      const orderBtn = document.querySelector(".order_btn");
-      orderBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        showNotification();
-      });
-    });
-  </script>  
+
+    function placeOrder() {
+      alert('Terimakasih! Kami akan mengirimkan email kepada Anda ketika pesanan sudah siap.');
+    }
+  </script>
 </body>
 </html>
