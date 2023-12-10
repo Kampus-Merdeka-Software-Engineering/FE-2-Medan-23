@@ -266,8 +266,7 @@
 
 .order{
   width: 100%;
-  height: 100vh;
-  padding: 70px 0;
+  padding: 20px 0;
   background-size: cover;
   background-position: center;
   background-color: #004225;
@@ -351,7 +350,23 @@
   text-decoration: none;
 }
 
-/* RESPONSIVE FOOTER */
+
+select {
+  width: 325px;
+  height: 35px;
+  font-size: 15px;
+  padding: 0 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-family: sans-serif;
+  outline: none;
+  background: #eeee;
+  border: 2px solid #cccccc;
+}
+
+
+/* FOOTER */
     .footer-col {
       width: 50%;
       margin-bottom: 30px;
@@ -450,3 +465,42 @@
       font-size: 12px;
       color: black;
     }
+
+/*responsif*/
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+
+  .navbar-nav-left,
+  .navbar-nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar-nav-right li {
+    margin: 5px 0;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+  .order_main {
+    flex-direction: column;
+  }
+
+  .order_image img {
+    width: 100%;
+  }
+
+  form {
+    margin: 20px 10px;
+  }
+  .footer-col {
+    width: 100%;
+  }
+}
+
+/*responsif*/

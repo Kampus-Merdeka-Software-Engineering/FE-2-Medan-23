@@ -201,7 +201,7 @@
     }
 
     
-        /* RESPONSIVE FOOTER */
+        /* FOOTER */
     .footer-col {
       width: 50%;
       margin-bottom: 30px;
@@ -299,3 +299,75 @@
       font-size: 12px;
       color: black;
     }
+
+/*responsif*/
+/* ... (your existing styles) */
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-nav-left,
+  .navbar-nav-right {
+    margin: 0;
+  }
+
+  .navbar-nav-right li {
+    margin: 0;
+  }
+
+  .btn {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .line {
+    width: 150px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  #coffee {
+    height: auto;
+  }
+
+  .btn-home {
+    margin-top: 10px;
+  }
+
+  .coffee-caption h1 {
+    font-size: 30px;
+  }
+
+  .coffee-caption p {
+    font-size: 14px;
+  }
+
+  .coffee-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffee-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+}

@@ -133,32 +133,46 @@
 <section id="menu">
 <h3 class="title">Order Now</h3>
     <div class="line"></div>
-<div class="order" id="Order">
 
+<div class="order" id="Order">
   <div class="order_main">
 
       <div class="order_image">
-          <img src="images/kopi.jpg">
+          <img src="images/c.jpg">
       </div>
 
       <form action="#">
           <div class="input">
               <p>Name</p>
-              <input type="text" placeholder="you name">
+              <input type="text" placeholder="Your name">
           </div>
 
           <div class="input">
               <p>Email</p>
-              <input type="email" placeholder="you email">
+              <input type="email" placeholder="Your email">
           </div>
 
           <div class="input">
               <p>Order</p>
-              <input placeholder="order">
+              
+              <form action="#">
+                <select name="order" id="order">
+                  <option value="Chocolate Crunch Frappuccino">Chocolate Crunch Frappuccino</option>
+                  <option value="Triple-Coffee Jelly Frappuccino">Triple-Coffee Jelly Frappuccino</option>
+                  <option value="Strawberry CheeseCake Frappuciino">Strawberry CheeseCake Frappuciinova</option>
+                  <option value="Mango-Jelly Frappuccino">Mango-Jelly Frappuccino</option>
+                  <option value="Coffe Americano">Coffe Americano</option>
+                  <option value="Caramel Macchiato">Caramel Macchiato</option>
+                  <option value="Indonesian Dolce Latte">Indonesian Dolce Latte</option>
+                  <option value="Cold Brew">Cold Brew</option>
+                </select>
+                
+                <div>
+                <a href="#" class="order_btn" onclick = "return confirm('Terimakasih kami akan mengirimkan email kepada anda ketika pesanan sudah siap');">Order Now</a></div>
+                </form>
           </div>
+          
 
-          <div></div>
-          <a href="#" class="order_btn" onclick = "return confirm('Terimakasih kami akan mengirimkan email kepada anda ketika pesanan sudah siap');">Order Now</a>
       </form>
   </div>
 </div>
@@ -212,5 +226,10 @@
   </div>
 
   </footer>
+
+  <script>
+    fetch ('https://be-2-medan-23-production.up.railway.app/orders')
+  </script>
+
 </body>
 </html>
