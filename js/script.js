@@ -31,6 +31,7 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+/*Integrate BE to FE*/
 const getAllMenu = () => {
   // Fetch all orders
   fetch(API_URL + '/orders')
