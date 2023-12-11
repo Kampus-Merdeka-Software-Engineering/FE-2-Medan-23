@@ -87,9 +87,3 @@ $("#order_btn").on('click', () => {
     })
     .catch(error => console.error('Error placing order:', error.message));
 });
-
-// Function to validate email format
-function validateEmail(email) {
-  const emailRegex = /\S+@\S+\.\S+/;
-  return emailRegex.test(email) && email.endsWith('@gmail.com');
-}
