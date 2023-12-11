@@ -156,19 +156,23 @@
   padding: 70px 0;
 }
 
-.menu .menu_box {
+.menu .menu_box{
   width: 95%;
-  margin: 20px auto;
+  margin: 0 auto;
   display: flex;
-  justify-content: center; /* Membuat kontennya berada di tengah secara horizontal */
-  align-items: center; /* Membuat kontennya berada di tengah secara vertical */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .menu .menu_box > div {
-  width: calc(33.33% - 20px); /* 33.33% untuk tiga kolom, dikurangi grid-gap */
-  margin: 10px; /* Setengah dari grid-gap */
-  box-sizing: border-box; /* Memastikan bahwa margin dan padding tidak menambah lebar elemen */
+  width: calc(33.33% - 20px);
+  margin: 10px;
   box-sizing: border-box;
   border-radius: 15px; /* Menambah lengkungan pada sudut elemen */
   overflow: hidden; /* Memastikan bahwa sudut melengkung tidak mempengaruhi elemen anak yang mungkin berada di luar batas */
