@@ -184,7 +184,7 @@
       
     #coffee {
       font-family: sans-serif;
-      background-color: #004225;
+      background: url(../images/bg_coffee.png) center/cover no-repeat;
       text-align: center;
     }
       
