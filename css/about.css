@@ -126,6 +126,13 @@
       font-weight: bold;
       text-align: center;
     }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('../images/bg.png') center/cover no-repeat fixed;
+      font-family: sans-serif;
+    }
   
     /*about us*/
     div {
