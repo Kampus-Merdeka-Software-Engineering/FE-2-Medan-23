@@ -68,22 +68,6 @@ function openTabs(evt, tabName) {
     evt.currentTarget.className += ' active';
   }
 
-/*slide show*/
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
 /*Integrate BE to FE*/
 const getAllMenu = () => {
   // Fetch all orders
@@ -99,4 +83,20 @@ const getAllMenu = () => {
       // Handle the data as needed
     })
     .catch(error => console.error('Error fetching orders:', error.message));
+}
+
+/*slide show*/
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
