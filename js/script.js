@@ -3,6 +3,56 @@ const API_URL = ENVIRONMENT === 'production' ? 'https://be-2-medan-23-production
 
 const containerElement = document.getElementById('container')
 
+$("#order_btn").on('click', () => {
+  const _confirm = confirm('Terimakasih kami akan mengirimkan email kepada anda ketika pesanan sudah siap');
+
+  if (!_confirm) return;
+
+  const name = $("#name").val()
+  const email = $("#email").val()
+  const order = $("#order").val()
+
+  // Validasi email
+  if (!validateEmail(email)) {
+    alert("Mohon masukkan alamat email yang valid dengan format @gmail.com");
+    return;
+  }
+
+  // Add an order
+  const orderDetails = {
+    name,
+    email,
+    order,
+  };
+  console.log(orderDetails)
+
+  fetch(API_URL + '/orders/add', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(orderDetails),
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to place order');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Order placed successfully:', data);
+      // Handle the data as needed
+      alert("Order placed successfully")
+    })
+    .catch(error => console.error('Error placing order:', error.message));
+});
+
+// Function to validate email format
+function validateEmail(email) {
+  const emailRegex = /\S+@\S+\.\S+/;
+  return emailRegex.test(email) && email.endsWith('@gmail.com');
+}
+
 function openTabs(evt, tabName) {
     const tabContent = document.getElementsByClassName('tab-content');
     for (let i = 0; i < tabContent.length; i++) {
@@ -49,53 +99,4 @@ const getAllMenu = () => {
       // Handle the data as needed
     })
     .catch(error => console.error('Error fetching orders:', error.message));
-}
-
-$("#order_btn").on('click', () => {
-  const _confirm = confirm('Terimakasih kami akan mengirimkan email kepada anda ketika pesanan sudah siap');
-
-  if (!_confirm) return;
-
-  const name = $("input[name=name]").val()
-  const email = $("input[name=email]").val()
-  const order = $("#order]").val()
-
-  // Validasi email
-  if (!validateEmail(email)) {
-    alert("Mohon masukkan alamat email yang valid dengan format @gmail.com");
-    return;
-  }
-
-  // Add an order
-  const orderDetails = {
-    name,
-    email,
-    order,
-  };
-
-  fetch(API_URL + '/orders/add', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(orderDetails),
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Failed to place order');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Order placed successfully:', data);
-      // Handle the data as needed
-      alert("Order placed successfully")
-    })
-    .catch(error => console.error('Error placing order:', error.message));
-});
-
-// Function to validate email format
-function validateEmail(email) {
-  const emailRegex = /\S+@\S+\.\S+/;
-  return emailRegex.test(email) && email.endsWith('@gmail.com');
 }
