@@ -17,6 +17,7 @@
       max-width: 100%;
       height: auto;
       backdrop-filter: opacity(50%);
+      margin-right: 50px 0;
     }
     
     nav {
