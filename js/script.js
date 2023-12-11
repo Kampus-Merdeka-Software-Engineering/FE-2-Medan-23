@@ -60,12 +60,6 @@ $("#order_btn").on('click', () => {
   const email = $("input[name=email]").val()
   const order = $("#order]").val()
 
-  // Validate email format
-  if (!validateEmail(email)) {
-    alert("Mohon masukkan alamat email yang valid dengan format @gmail.com");
-    return;
-  }
-
   // Add an order
   const orderDetails = {
     name,
