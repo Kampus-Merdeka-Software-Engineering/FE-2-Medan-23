@@ -188,6 +188,7 @@
       background: url(../images/bg.png) center/cover no-repeat;
       text-align: center;
       padding: 80px 0;
+      filter: saturate(20%) blur(5px);
     }
       
     .coffee-content {
