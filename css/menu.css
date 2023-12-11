@@ -161,8 +161,9 @@
   margin: 0 auto;
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin-top: 20px;
+  margin-right: 10px;
   flex-wrap: wrap;
 }
 
