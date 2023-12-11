@@ -158,7 +158,8 @@
       border-radius: 10px;
       margin-top: 25px;
       background-color: transparent;
-      color: white;
+      color: black;
+      font-weight: bold;
       font-size: 15px;
       cursor: pointer;
       }
@@ -168,14 +169,14 @@
       }
       
     .coffee-caption h1 {
-      color: white;
+      color: black;
       font-weight: bold;
       font-size: 50px;
     }
       
     .coffee-caption p {
       margin: 10px 0;
-      color: white;
+      color: black;
     }
       
     .coffee-img {
@@ -184,10 +185,9 @@
       
     #coffee {
       font-family: sans-serif;
-      background: url(../images/bg1.jpg) center/cover no-repeat;
+      background: url(../images/bg1.png) center/cover no-repeat;
       text-align: center;
-      padding: 80px 0; 
-      filter: saturate(70%); 
+      padding: 80px 0;
     }
       
     .coffee-content {
