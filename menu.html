@@ -233,15 +233,13 @@
 
   <script>
     function checkDropdown() {
-      // Check if the dropdown is open
-      var dropdown = document.getElementById("order");
-      if (dropdown.selectedIndex === -1) {
-        // Dropdown is open, do nothing
-      } else {
-        // Dropdown is closed, call the placeOrder function
-        placeOrder();
-      }
-    }
+   var dropdown = document.getElementById("order");
+   if (dropdown.value === "") {
+      alert("Please select an item from the menu.");
+   } else {
+      placeOrder();
+   }
+  }
   </script>
 </body>
 </html>
