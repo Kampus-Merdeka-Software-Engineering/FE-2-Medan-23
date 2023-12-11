@@ -60,6 +60,12 @@ $("#order_btn").on('click', () => {
   const email = $("input[name=email]").val()
   const order = $("#order]").val()
 
+  // Validasi email
+  if (!validateEmail(email)) {
+    alert("Mohon masukkan alamat email yang valid dengan format @gmail.com");
+    return;
+  }
+
   // Add an order
   const orderDetails = {
     name,
@@ -87,3 +93,9 @@ $("#order_btn").on('click', () => {
     })
     .catch(error => console.error('Error placing order:', error.message));
 });
+
+// Function to validate email format
+function validateEmail(email) {
+  const emailRegex = /\S+@\S+\.\S+/;
+  return emailRegex.test(email) && email.endsWith('@gmail.com');
+}
